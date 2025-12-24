@@ -1,0 +1,2 @@
+#!/usr/bin/perl
+system("/pfs/10/work/hd_cu284-work/radmc3d-2.0/src/radmc3d @ARGV");
