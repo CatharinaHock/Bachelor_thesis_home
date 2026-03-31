@@ -28,7 +28,7 @@ unset rc
 
 $HOME/create_keys.sh
 export PYTHONPATH=$HOME/bin/python:$PYTHONPATH
-export WORK=/pfs/10/work/hd_cu284-work/
+export WORK=/pfs/10/work/hd_cu284-work2/
 export LD_LIBRARY_PATH=/usr/lib64:$LD_LIBRARY_PATH
 
 # >>> conda initialize >>>

@@ -1,0 +1,38 @@
+images_K_run_1.npy
+dens_run_1.npy
+sigma_means_run_1.npy
+
+Note: Planet is in wrong position.
+
+
+Params:
+incl = 45.0
+posang = 356.+90
+npix = 200
+sizeau = 800.
+phi= 180 # does not do that much
+wav_K = 2.2 # K band
+wav_H = 1.65 # H band
+
+dens = 0.05
+#### dens_list = np.ones(len(path_endings))*0.05
+
+path_endings=["fargo_fiducial_2gen", "fargo_high_mass_2gen",  "fargo_low_mass_2gen", "fargo_high_visc_2gen", "fargo_low_visc_2gen",
+              "fargo_sigslop_0_2gen","fargo_sigslop_0.5_2gen", "fargo_sigslop_-2_2gen", ]
+
+##### fargo_fiducial_2gen #####
+Estimate for disk mass: 0.08249040000031344 solar masses
+##### fargo_high_mass_2gen #####
+Estimate for disk mass: 0.08249040000031344 solar masses
+##### fargo_low_mass_2gen #####
+Estimate for disk mass: 0.08249040000031344 solar masses
+##### fargo_high_visc_2gen #####
+Estimate for disk mass: 0.08249040000031344 solar masses
+##### fargo_low_visc_2gen #####
+Estimate for disk mass: 0.08249040000031344 solar masses
+##### fargo_sigslop_0_2gen #####
+Estimate for disk mass: 0.00528228000002007 solar masses
+##### fargo_sigslop_0.5_2gen #####
+Estimate for disk mass: 0.019956142958530425 solar masses
+##### fargo_sigslop_-2_2gen #####
+Estimate for disk mass: 3.990568254862808e-05 solar masses

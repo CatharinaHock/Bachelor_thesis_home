@@ -1,1000 +1,1000 @@
-sbatch jupyterlab.slurm
-ls
-cat slurm-1636139.out 
+squeue -u $UER
 squeue -u $USER
-ls
-cd $WORK
-cd fargo3d/
-ls
-cd outputs/
-ls
-cd ../../binac_runs/
-nano fargo_a_1e3
-nano fargo_a_1e3.par 
-nano fargo_a_1e2.par 
-nano fargo_a_1e3.par 
-nano fargo_a_1e4.par 
-cd ../fargo3d/
-sbatch --job-name=fargo_a_1e3 run_fargo.slurm
-sbatch --job-name=fargo_a_1e2 run_fargo.slurm
-sbatch --job-name=fargo_a_1e4 run_fargo.slurm
-squeue -u $USER
-ls
-cat fargo_a_1e3.out 
-cd ..
-cd binac_runs/
-nano fargo_a_1e3.par 
-nano fargo_a_1e2.par 
-nano fargo_a_1e4.par 
-cd ..
-cd fargo3d/
-sbatch --job-name=fargo_a_1e3 run_fargo.slurm
-scancel 1636148
-scancel 1636147
-sbatch --job-name=fargo_a_1e3 run_fargo.slurm
-sbatch --job-name=fargo_a_1e2 run_fargo.slurm
-sbatch --job-name=fargo_a_1e4 run_fargo.slurm
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-cat fargo_a_1e2.par 
-cat fargo_a_1e3.par 
-cd ..
-cd fargo3d/outputs/fargo_a_1e3
-ls
-cd ../fargo_a_1e4/
-ls
-cd ..
-cd binac_runs/
-cat fargo_a_1e2.par 
-cat fargo_a_1e4.par 
-cd ../fargo3d/
-ls
-nano fargo_1e4.out
-nano fargo_a_1e4.out
-tail fargo_a_1e4.out 
-cat fargo_a_1e4.out 
-squeue -u $USER
-cat run_fargo.slurm 
-cd outputs/
-cd fargo_a_1e4/
-ls
-head gasdens50.dat
-head gasdens48.dat
-ls
-squeue -u $USER
-cd ..
-cd fargo_a_1e2/
-ls
-squeue -u $USER
-cd ..
-mv fargo_a_1e2 fargo_a_1e-2
-ls
-mv fargo_a_1e3 fargo_a_1e-3
-mv fargo_a_1e4 fargo_a_1e-4
-ls
-cd ..
-cd binac_runs/
-ls
-ls -la
-cd ..
-rm -r binac_runs
-ls
-ls binac_runs/
-cd far
-cd fargo3d/
-cat run_fargo.slurm 
-ls
-ws_list
-cd $WORK
-ls
-cd fargo3d/
-ls
-cd ..
-cd binac_runs/
-ls
-cat run_fargo.slurm 
-cd ..
-cd fargo3d/
-make clean
-make SETUP="fargo_multifluid"
-cd ..
-cd binac_runs/
-ls
-nano fargo_multifluid.par 
-cat fargo_a_1e-2.par 
-sbatch --job-name=fargo_multifluid run_fargo.slurm
-squeue -u $USER
-sstat 1642128
-cd ..
- cd fargo3d/
-ls
-cd ..
-cd binac_runs/
-ls
-ls fargo_multifluid.out
-cat fargo_multifluid.out 
-cat fargo_multifluid.err 
-rm *.our
-rm *.out
+squeue --start -j 2047366
+cat run_fargo_light2.slurm 
+rm run_fargo_light2.slurm 
 rm *.err
-ls
-cd ..
-cd fargo3d/
-sbatch --job-name=fargo_multifluid run_fargo.slurm
-squeue -u $USER
-ls
-cat run_fargo.slurm 
-squeue -u $USER
-ls
-cd outputs/
-ls
-cd ..
-cat fargo_multifluid.err
-make clean
-make SETUP="fargo_multifluid"
-sbatch --job-name=fargo_multifluid run_fargo.slurm
-squeue -u $USER
-cat fargo_multifluid.err
-make clean
-sbatch --job-name=fargo_multifluid run_fargo.slurm
-squeue -u $USER
-cat fargo_multifluid.err
-make SETUP = "fargo_multifluid"
-make SETUP="fargo_multifluid"
-module purge
-module load mpi/openmpi/4.1-gnu-13.3
-module load devel/cuda/12.6
-make SETUP="fargo_multifluid"
-sbatch --job-name=fargo_multifluid run_fargo.slurm
-squeue -u $USER
-ls
-cd ..
-ls
-cd $HOME
-ls
-cd $WORK
-ls
-squeue -u $USER
-cd fargo3d/
-exit
-cd $WORK
-cd radmc3d-2.0/
-make
-cd src
-make
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1645023.out 
-cd $WORK
-ls
-cd fargo3d/
-ls
-cd outputs/
-ls
-cd ..
-ls
-mkdir my_radmc3d-2.0
-radmc3d --version
-ls
-cp run_ppdisk_fargo3d_1/ my_radmc3d-2.0/
-cp -r run_ppdisk_fargo3d_1/ my_radmc3d-2.0/
-ls
-cd my_radmc3d-2.0/
-ls
-cd ..
-rm -r run_ppdisk_fargo3d_1/
-ls
-cd my_radmc3d-2.0/
-LS
-ls
-cd run_ppdisk_fargo3d_1/
-ls
-nano radmc3d.slurm
-ls
-sbatch radmc3d.slurm
-cat radmc3d.
-cat radmc3d.slurm
-nano radmc3d.slurm 
-sbatch radmc3d.slurm
-squeue -u $USER
-ls
-cat radmc3d.slurm.err 
-cd ..
-cd radmc3d-2.0/
-make install
-cd src/
-make install
-cd ..
-cd my_radmc3d-2.0/
-cd run_ppdisk_fargo3d_1/
-sbatch radmc3d.slurm
-squeue -u $USER
-ls
-squeue -u $USER
-ls
-cat radmc3d.slurm.err
-cat radmc3d.slurm.out
-nano radmc3d.slurm
-cat radmc3d.slurm.out
-tail radmc3d.slurm.out
-squeue -u $USER
-ls
-cd $HOME
-ls
-mv problem_setup.ipynb 'jupyter notebooks'
-ls
-cd $WORK
-cd radmc3d-2.0/
-ls
-cd python/
-ls
-cd radmc3dPy/
-ls
-conda activate kernel_venv
-confa info --envs
-module load devel/miniforge/24.9.2
-conda activate kernel_venv
-confa info --envs
-conda info --envs
-conda activate kernel_env
-python setup.py install --user
-python
-pip install scipy
-python
-pip install pyfits
-python
-pip install pyfits
-pip install astropy
-python
-cd ..
-python
-squeue -u $USER
-ls
-cd ..
- cd my_radmc3d-2.0/
-ls
-cd run_ppdisk_fargo3d_1/
-ls
-tail radmc3d.slurm.out
-squeue -u $USER
-scancel -u $USER
-squeue -u $USER
-exit
-$WORK
-ls
 rm *.out
 ls
-cd $WORK
-ls
-cd binac_runs/
-ls
-cat run_fargo.slurm 
-cd ..
-cd fargo3d/
-make clean
-make SETUP="fargo_alpha_visc"
-make info
-ls
-sbatch run_fargo.slurm --jobname="fargo_log_grid"
-squeue -u $USER
-ls
-sbatch --job_name=fargo_log_grid run_fargo.slurm
-sbatch --job-name=fargo_log_grid run_fargo.slurm
-squeue -u $USER
-ls
-cat fargo_log_grid.err
-module load mpi/openmpi/4.1-gnu-13.3
-module load devel/cuda/12.6
-make clean
-make SETUP="fargo_alpha_visc"
-sbatch --job-name=fargo_log_grid run_fargo.slurm
-squeue -u $USEr
-squeue -u $USER
-ls
-tail fargo_log_grid.out
-tail fargo_log_grid.err
-tail fargo_log_grid.out
-squeue -u $USER
-cd outputs/
-ls
-cd fargo_log_grid/
-ls
-cd ..
-cd $HOME
-ls
-sbatch jupyterlab.slurm
+sbatch --job-name=fargo_fiducial run_fargo_light.slurm
 ls
 squeue -u $USER
-ls
-cat slurm-1652254.out 
-cd $WORK
-squeue -u $USER
-cd radmc3d-2.0/
-ls
-cd src/
-make install
-ls
-cd ..
-ls
-cd py
-cd python/
-ls
-cd radmc3dPy/
-ls
-cd $HOME
-nano bashrc
-ls
-rm bashrc 
-rm .bashrc 
-cat .bashrc
-cp /etc/skel/.bashrc ~/.bashrc
-cat .bashrc
-$WORK
-nano .bashrc
-module load devel/miniforge/24.9.2
-conda activate kernel_env
-$WORK
-nano .bashrc
-$WORK
-tail .bashrc
-python
-exit
-$WORK
-python
-module load devel/miniforge/24.9.2
-conda activate kernel_env
-python
-cd bin/python/radmc3d_tools/
-nano sph_to_sphergrid.py 
-python
-pip install tqdm
-python
-cd $WORK
-cd radmc3d-2.0/
-cd python/
-cd radmc3dPy/
-python setup.py install --user
-cd ..
-python
-squeue -u $USER
-scancel -u $USER
-cd $HOME
-ls
-sbatch jupyterlab.slurm
-ls
+scancel 2047366
+scancel 2047368
+sbatch --job-name=fargo_fiducial run_fargo_light.slurm
 squeue -u $USER
 ls
-squeue -u $USER
-ls
-cat slurm-1652271.out
-python
-cd $HOME
-cd $WORK
-cd radmc3d-2.0/
-cd python/
-cd radmc3dPy
-ls
-python
-cd $HOME
-python
-cd bin
-ls
-cd python/
-ls
-cd $WORK
-cd radmc3d-2.0/python/radmc3dPy/
-python setup.py install --user
-pip install . --user
-cd $HOME
-python
-cd $WORK
-cd fargo3d/
-cd outputs/
-cd fargo_log_grid/
-head domain_x.dat
-ws_list
+cat fargo_fiducial.err
 pwd
-cd $HOME
+ls ../binac_runs/fargo_fiducial.par
 pwd
-scancel -u $USER
-exit
-ls
-sbatch jupyter
-sbatch jupyterlab.slurm
+nano run_fargo_light.slurm
+sbatch --job-name=fargo_fiducial run_fargo_light.slurm
 squeue -u $USER
 ls
-car slurm-1663426.out 
-cat slurm-1663426.out 
-cd $WORK
-ls
-cd my_radmc3d-2.0/
-ls
-cd ..
-cd fargo3d/
-ls
-ls outputs
-ls outputs/fargo_
-ls outputs/fargo_log_grid/
+cat fargo_fiducial.err
+cat /pfs/10/work/hd_cu284-work/binac_runs/fargo_fiducial.par
+pwd
+ls -l /pfs/10/work/hd_cu284-work/binac_runs/fargo_fiducial.par
 cd ..
 cd binac_runs/
 ls
-cat fargo_log_grid.par 
+nano fargo_fiducial_2nd.par
+cat fargo_fiducal.par 
+nano fargo_fiducial_2gen.par
+rm fargo_fiducal.par 
 ls
 cd ..
 cd fargo3d/
-l
 ls
-cat run_fargo.slurm
-ws_list
-cd ..
+sbatch --job-name=fargo-fiducial-2gen run_fargo_light.slurm
+squeue -u $USER
+sbatch --job-name=fargo_fiducial_2gen run_fargo_light.slurm
 ls
 squeue -u $USER
-cd radmc3d-2.0/
+ws_list
+squeue -u $USER
+cd ..
+cd binac_runs/
 ls
-cd src/
+cd old
 ls
-make
-make all
-make install
+cat fargo_a_1e-2.par 
+ls
+cd ..
+ls
+cat fargo_fiducial_2gen.par 
+nano fargo_low_mass_2gen.par
+cd ..
+cd fargo3d/
+ls
+cd planets/
+ls
+cd ..
+sbatch --job-name=fargo_low_mass_2gen.par run_fargo_light.slurm
+squeue -u $USER
+ls
+rm *.err
+rm *.out
+ls
+sbatch --job-name=fargo_low_mass_2gen run_fargo_light.slurm
+cat run_fargo_light.slurm 
+squeue -u $USER
+cd ..
+cd binac_runs/
+ls
+cat fargo_fiducial_2gen.par 
+ls
+nano fargo_high_mass_2gen.par
+ls
+cd ..
+cd fargo3d/
+sbatch --job-name=fargo_high_mass_2gen run_fargo_light.slurm
+squeue -u $USER
+cd ..
+cd binac_runs/
+ls
+cat fargo_fiducial_2gen.par 
+nano fargo_sigslop_0.5_2gen
+cat fargo_high_mass_2gen.par 
+cat fargo_low_mass_2gen.par 
+ls
+cp fargo_sigslop_0.5_2gen fargo_sigslop_0.5_2gen.par
+ls
+rm fargo_sigslop_0.5_2gen
+ls
+nano fargo_sigslop_-2_2gen.par 
+nano fargo_sigslop_0_2gen.par 
+nano fargo_sigslop_-2_2gen.par 
+nano fargo_sigslop_0_2gen.par 
+ls
+fargo_low_visc_2gen.par
+nano fargo_low_visc_2gen.par
+nano fargo_high_visc_2gen.par
+ls
+squeue -u $USER
+cd ../fargo3d/
+sbatch --job-name=fargo_sigslop_0.5_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_sigslop_-2_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_sigslop_0_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_sigslop_low_visc_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_sigslop_high_visc_2gen run_fargo_light.slurm
+squeue -u $USER
+sbatch --job-name=fargo_high_visc_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_loq_visc_2gen run_fargo_light.slurm
+sbatch --job-name=fargo_low_visc_2gen run_fargo_light.slurm
+squeue -u $USER
 cd $HOME
-ls
 cd jupyter\ notebooks/
 ls
-cd run_ppdisk_fargo3d_1/
+cd thesis_suited_plots_maybe/
+ls
+cd radmc3d_sims/
+ls
+python makedustopacfortran.py
+module load devel/miniforge/24.9.2
+python makedustopacfortran.py
+python problem_setup.py
+module load devel/miniforge/24.9.2
+python problem_setup.py
+ls
+Makefile
+cat README
+python problem_setup.py
+which python
+cd $HOME
+cat jupyter
+cat jupyterlab.slurm 
+module load devel/jupyterlab/7.4.1
+cd jupyter\ notebooks/
+ls
+cd thesis_suited_plots_maybe/
+cd radmc3d_sims/
+python problem_setup.py
 ls
 make
 nano make_scatmat_smoothed.f90 
 make
-module avail gcc
-module avail gfortran
-gfortran --version
-find /usr -name "libgfortran.so.5*" 2>/dev/null
-cd $HOME
-nano .bashrc
-source .bashrc
-source ~/.bashrc
-bash ~/.bashrc
-./makeopac_smoothed
-cd jupyter\ notebooks/
-cd run_ppdisk_fargo3d_1/
-./makeopac_smoothed
 squeue -u $USER
-scancel -u $USER
+exit
+squeue -u $USER
+cd $WORK
+cd fargo3d/
+cd outputs/
+ls
+cd fargo_high_mass_2gen/
+ls
 cd ..
 ls
-sbatch jupyterlab.slurm
+ls fargo_sigslop_0.5_2gen/
 ls
-cat slurm-1664365.out 
-ls
-python altered_setup.py
-conda activate kernel_env
-conda init
-conda activate kernel_env
 exit
-ls
 sbatch jupyterlab.slurm
+ls
+cat slurm-2065764.out 
+ws_list
+ws_help
+ws_extend work
+ws_list
+ws_extend work 30
+ws_list
+cd $WORK
+cd fargo3d/
+cd outputs/
+ls
+cd $HOME
+cd jupyter\ notebooks/
+ls
+cd thesis_suited_plots_maybe/
+pwd
+ls
+cd radmc3d_sims/
+pwd
 ls
 rm *.out
 ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2072142.out 
+ls
+cd $WORK
+cd
+ls
+cd $WORK
+ls
+cd binac_runs/
+cd
+ls
+cd $WORK
+cd binac_runs/
+ls
+cat fargo_fiducial_2gen.par 
 squeue -u $USER
-ls
-scancel -u $USER
-ls
+cat slurm-2072142.out 
+squeue -u $USER
+scancel 2072142
 squeue -u $USER
 sbatch jupyterlab.slurm
 ls
 squeue -u $USER
 ls
-cat slurm-1677747.out 
-cd jupyter\ notebooks/
+cat slurm-2072244.out 
+squeue -u $USER
+cat slurm-2072
 ls
-cd run_ppdisk_fargo3d_1/
+cat slurm-2072244.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
 ls
-./makeopac_smoothed
+cat slurm-2083596.out 
+squeue
+squeue -u $USER
+exit
+ws_list
+sbatch jupyterlab.slurm
 ls
-echo $LD_LIBRARY_PATH
-conda activate kernel_env
-module load devel/miniforge/24.9.2
-conda activate kernel_env
+cat slurm-2149699.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
 ls
-python altered_setup.py 
-radmc3d image lambda 1000 incl 60 phi 30
-cd $HOME
+cat slurm-2151630.out 
 ls
+cd libs/
+ls
+cd ..
 cd bin
-cd py
+ls
+cd python/
+ls
+cd ..
+ls
 cd python/
 cd radmc3d_tools/
 ls
-nano sph_to_sphergrid.py 
-cat .bashrc
+cd $WORK
+ls
+cd radmc3d-2.0/
+ls
+cd python/
+ls
+cd radmc3dPy/
+ls
+cd radmc3dPy
+ls
+nano image.py 
+nano image.py
+cp image.py altered_image.py
+ls
 cd $HOME
-cat .bashrc
+ls
+cat slurm-214
+cat slurm-2151630.out 
+squeue -u $USER
+scancel 2151630
+squeue -u $USER
+ls
+squeue -u $USER
+exit
+ws_lis
+ws_list
+exit
+ws_list
+sbatch jupyterlab.slurm
+ls
+cat slurm-2256525.out 
+sbatch jupyterlab.slurm
+ls
+cat slurm-2314300.out 
+squeue -u $USEr
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2316106.out 
+squeue -u $USER
+ws_list
+squeue -u $USER
+scancel 2316106
+squeue -u $USER
+exit
+cd $WORK
+ls
+cd binac_runs/
+ls
+cp fargo_sigslop_0.5_2gen.par fargo_sigslop_1.5_2gen.par
+ls
+nano fargo_sigslop_1.5_2gen.par 
+cat fargo_sigslop_1.5_2gen.par 
+cd ..
+cd fargo3d/
+ls
+cat run_fargo_light.slurm 
+sbatch --job-name=fargo_sigslop_1.5_2gen run_fargo_light.slurm
+squeue -u $USER
+squeue --start -j 2316174
+squeue -u $USER
+scancel 2316174
+cat run_fargo_light.slurm 
+cp run_fargo_light.slurm run_fargo_lighter.slurm
+nano run_fargo_lighter.slurm 
+sbatch --job-name=fargo_sigslop_1.5_2gen run_fargo_lighter.slurm
+squeue -u $USER
+squeue --start -j 2316176
+sshare -u $USER
+squeue --start -j 2316176
+nano run_fargo_lighter.slurm 
+ws_list
+ws_extend work 30
+ws_list
+cd $WORK
+ls
+cd fargo3d/
+ls
+cat fargo_sigslop_1.5_2gen.err
+cd ..
+cd binac_runs/
+ls
+cat fargo_sigslop_1.5_2gen.par 
+ls
+cd ..
+cd fargo3d/
+cat fargo_sigslop_1.5_2gen.err
+cat fargo_sigslop_1.5_2gen.out
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2317424.out 
+squeue -u $USER
+scancel 2317453
+squeue -u $USER
+exit
+squeue -u $USER
+cd $WORK
+cd binac_runs/
+ls
+cat fargo_fiducial_2gen.par 
+cd ..
+cd fargo3d/
+ls
+cd planets/
+ls
+cat WISPIT_middle.cfg 
+cat WISPIT_low
+cat WISPIT_lower.cfg 
+cat WISPIT_upper.cfg 
+squeue -u $USER
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2317453.out 
+squeue -u $USER
+cd $WORK
+ls
+cd fargo3d/
+ls
+cd setups/
+ls
+cd fargo_alpha_visc/
+ls
+cat fargo_alpha_visc.par
+ls
+cat fargo_alpha_visc.opt
+cd ..
+ls
+cd fargo
+ls
+cat fargo.opt
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+squeue -u $USER
+ls
+vat slurm-2322274.out 
+cat slurm-2322274.out 
+squeue -u $USER
+scancel 2322274
+squeue -u $USER
+ls
+rm *.out
+ks
+ls
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2323119.out 
+ls
+squeue -u $USER
+scancel 2323119
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2323650.out 
+cd $WORK
+cd fargo3d/
+ls
+cd planets/
+ls
+cat MobileJupiter.cfg 
+cp WISPIT_middle.cfg WISPIT_companion.cfg
+nano WISPIT_companion.cfg 
+cat WISPIT_middle.cfg 
+cat WISPIT_companion.cfg 
+cd ..
+cd binac_runs/
+ls
+cp fargo_fiducial_2gen.par 
+cp fargo_fiducial_2gen.par fargo_fiducial_companion.par
+nano fargo_fiducial_companion.par 
+cat fargo_fiducial_
+cat fargo_fiducial_companion.par 
+cd .. 
+cd fargo3d/
+ls
+cd planets/
+ls
+nano WISPIT_companion.cfg 
+cd ..
+sbatch --job-name=fargo_fiducial_companion run_fargo_light.slurm
+squeue -u $USER
+ls
+cat fargo_fiducial_companion.out
+cat fargo_fiducial_companion.err
+squeue -u $USER
+cd $WORK
+cd fargo3d/
+ls
+cd outputs/
+ls
+cd fargo_fiducial_companion/
+ls
+cd ..
+ls
+cd ..
+ls
+cat fargo_fiducial_companion.err
+cat fargo_fiducial_companion.out
+cd ..
+cd binac_runs/
+ls
+nano fargo_fiducial_companion.par 
+cd ..
+cd fargo3d/
+ls
+cd planets/
+ls
+cp WISPIT_companion.cfg WISPIT_companion_old.cfg 
+nano WISPIT_companion.cfg 
+cd ..
+sbatch --job-name=fargo_fiducial_companion run_fargo.slurm
+squeue -u $USER
+cd outputs/
+ls
+cd fargo_fiducial_companion/
+ls
+head gasdens0.dat
+squeue -u $USER
+cd ..
+ls
+cd ..
+ls
+cat fargo_fiducial_companion.out 
+ls
+cd planets/
+ls
+cp WISPIT_companion.cfg WISPIT_light_companion.cfg
+nano WISPIT_light_companion.cfg 
+cp WISPIT_companion.cfg WISPIT_heavy_companion.cfg
+nano WISPIT_heavy_companion.cfg
+cp WISPIT_companion.cfg WISPIT_super_light_companion.cfg
+nano WISPIT_super_light_companion.cfg
+cp WISPIT_companion.cfg WISPIT_companion_with_feelings.cfg
+nano WISPIT_companion_with_feelings.cfg 
+cd ..
+cd binac_runs/
+cp fargo_fiducial_companion.par fargo_fiducial_companion_with_feelings.par
+nano fargo_fiducial_companion_with_feelings.par 
+cp fargo_fiducial_companion.par fargo_fiducial_heavy_companion.par
+nano fargo_fiducial_heavy_companion.par 
+cp fargo_fiducial_companion.par fargo_fiducial_light_companion.par
+nano fargo_fiducial_light_companion.par 
+cp fargo_fiducial_companion.par fargo_fiducial_super_light_companion.par
+nano fargo_fiducial_super_light_companion.par 
+nano fargo_fiducial_light_companion.par 
+nano fargo_fiducial_heavy_companion.par 
+cd ..
+cd fargo3d/
+cd planets/
+nano WISPIT_heavy_companion.cfg 
+nano WISPIT_light_companion.cfg 
+cd ..
+cat fargo_fiducial_companion.out
+sbatch --job-name=fargo_fiducial_companion_with_feelings run_fargo_light.slurm
+squeue -u $USER
+sbatch --job-name=fargo_fiducial_light_companion run_fargo_light.slurm
+sbatch --job-name=fargo_fiducial_heavy_companion run_fargo_light.slurm
+squeue -u $USER
+cd planets/
+ls
+cp WISPIT_light_companion.cfg WISPIT_close_light_companion
+ls
+rm WISPIT_close_light_companion 
+cp WISPIT_light_companion.cfg WISPIT_close_light_companion.cfg
+nano WISPIT_close_light_companion.cfg 
+cp WISPIT_compantion.cfg  WISPIT_close_companion.cfg 
+cp WISPIT_companion.cfg  WISPIT_close_companion.cfg 
+nano WISPIT_close_companion.cfg 
+cd ..
+cd binac_runs/
+ls
+cp fargo_fiducial_companion.par fargo_fiducial_close_companion.par
+nano fargo_fiducial_close_companion.par 
+cp fargo_fiducial_companion.par fargo_fiducial_light_close_companion.par
+nano fargo_fiducial_light_close_companion.par 
+nano fargo_fiducial_close_companion.par 
+cd ..
+cd fargo3d/
+sbatch --job-name=fargo_fiducial_close_companion run_fargo_light.slurm
+cd ..
+cd binac_runs/
+nano fargo_fiducial_light_close_companion.par 
+cp fargo_fiducial_light_close_companion.par fargo_fiducial_close_light_companion.par 
+rm fargo_fiducial_light_close_companion.par 
+ls
+nano fargo_fiducial_close_light_companion.par 
+cd ..
+cd fargo3d/
+sbatch --job-name=fargo_fiducial_clos_light_companion run_fargo_light.slurm
+squeue -u $USER
+sbatch --job-name=fargo_fiducial_close_light_companion run_fargo_light.slurm
+squeue -u $USER
+scancel 2323742
+squeue -u $USER
+ls
+sbatch --job-name=fargo_fiducial_super_light_companion run_fargo_light.slurm
+cd
+cd ..
+LS
+ls
+cd $WORK
+ls
+cd binac_runs/
+ls
+squeue -u $USER
+scancel 2323650
+squeue -u $USER
+exit
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2323766.out 
+cd $WORK
+squeue -u $USER
+sinfo
+sinfo 2323745
+squeue -u $USER
+scancel 2323766
+exit
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2324147.out 
+cd $WORK
+cd fargo3d/
+cd planets/
+ls
+cat WISPIT_companion.cfg 
+cat WISPIT_super_light_companion.cfg 
+cat WISPIT_light_companion.cfg 
+cat WISPIT_close_companion.cfg 
+ls
+cat WISPIT_companion_with_feelings.cfg 
+df -h
+squeue -u $USER
+scancel 2324147
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2325270.out 
+cd $WORK
+cd fargo3d/
+cd planets/
+ls
+cp WISPIT_close_light_companion.cfg WISPIT_closer_light_companion.cfg
+nano WISPIT_closer_light_companion.cfg 
+ano WISPIT_closer_light_companion.cfg 
+nano WISPIT_closer_light_companion.cfg 
+cp WISPIT_close_light_companion.cfg WISPIT_close_super_light_companion.cfg
+nano WISPIT_close_super_light_companion.cfg 
+nano WISPIT_super_light_companion.cfg 
+cp WISPIT_close_light_companion.cfg WISPIT_closer_super_light_companion.cfg
+nano WISPIT_closer_super_light_companion.cfg 
+cd ..
+cd binac_runs/
+ls
+cp fargo_fiducial_super_light_companion.par fargo_fiducial_close_super_light_companion.par
+nano fargo_fiducial_close_super_light_companion.par 
+p fargo_fiducial_super_light_companion.par fargo_fiducial_closer_super_light_companion.par
+cp fargo_fiducial_super_light_companion.par fargo_fiducial_closer_super_light_companion.par
+nano fargo_fiducial_closer_super_light_companion.par 
+cp fargo_fiducial_super_light_companion.par fargo_fiducial_closer_light_companion.par
+nano fargo_fiducial_closer_light_companion.par 
+cd ..
+cd fargo3d/
+sbatch --job-name=fargo_fiducial_closer_light_companion run_fargo_light.slurm
+ls
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo_light.slurm
+sbatch --job-name=fargo_fiducial_close_super_light_companion run_fargo_light.slurm
+squeue -u $USER
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo_light.slurm
+squeue -u $USER
+ls
+cat fargo_fiducial_super_light_companion.err
+cat fargo_fiducial_super_light_companion.out
+cat fargo_fiducial_closer_super_light_companion.err
+cd ..
+cd binac_runs/
+ls
+nano fargo_fiducial_closer_super_light_companion.par 
+cd ..
+cd fargo3d/
+cd planets/
+nano WISPIT_closer_super_light_companion.cfg 
+cd ..
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo_light.slurm
+squeue -u $USER
+cd ..
+cd binac_runs/
+cat fargo_fiducial_closer_super_light_companion.par 
+cd ..
+cd fargo3d/
+cat fargo_fiducial_closer_super_light_companion.
+cat fargo_fiducial_closer_super_light_companion.out
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo.slurm
+squeue -u $USER
+squeue --start -j 2325294
+squeue -u $USER
+scancel 2325270
+squeue -u $USER
+exit
+sbatch jupyterlab.slurm
+squeue -u $USER
+ls
+cat slurm-2331736.out 
+cd $WORK
+cd fargo3d/
+cd outputs/
+cd ..
+cat fargo_fiducial_closer_super_light_companion.out
+df -h /dev/shm
+module list
+ldd ./fargo3d | grep mpi
+c
+cat fargo_fiducial_closer_super_light_companion.err
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo.slurm
+squeue -u $USER
+scancel 2331737
+sbatch --job-name=fargo_fiducial_closer_super_light_companion run_fargo_light.slurm
+squeue -u $USER
+cat fargo_fiducial_closer_super_light_companion.err
+cat fargo_fiducial_closer_super_light_companion.out
+cat fargo_fiducial_closer_super_light_companion.err
+cat fargo_fiducial_closer_super_light_companion.out
+exit
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2345099.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
+squeue -u $USER
+ls
+cat slurm-2348464.out 
+squeue -u $USER
+scancel -u $USER
+squeue -u $USER
+exit
+squeue -u $USER
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2349672.out 
+cd $WORK
+cd fargo3d/
+cd outputs/
+ls
+squeue -u $USER
+scancel 2349672
+squeue -u $USER
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-23499
+cat slurm-2349898.out 
+squeue -u $USER
+scancel -u $USER
+squeue -u $USER
+exit
+squeue -u $USER
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2351404.out 
+cd $WORK
+ls
+cd fargo3d/
+ls
+cd planets/
+ls
+cat WISPIT_close_companion.cfg 
+cat WISPIT_closer_light_companion.cfg 
+cp WISPIT_close_companion.cfg WISPIT_closer_companion.cfg
+nano WISPIT_closer_companion.cfg 
+cat WISPIT_closer_companion.cfg 
+cd ..
+cd binac_runs/
+ls
+cp fargo_fiducial_close_companion.par fargo_fiducial_closer_companion.par
+nano fargo_fiducial_closer_companion.par 
+cd ..
+cd fargo3d/
+sbatch --job-name = fargo_fiducial_closer_companion run_fargo_light.slurm
+ls
+sbatch --job-name=fargo_fiducial_closer_companion run_fargo_light.slurm
+squeue -u $USER
+cat fargo_fiducial_closer_companion.out
+cd ..
+squeue -u $USER
+ls
+cd $WORK
+cd fargo3d/
+cat fargo_fiducial_closer_companion.out
+squeue -u $USER
+cat fargo_fiducial_closer_companion.out
+squeue -u $USER
+cd outputs/
+ls
+cd fargo_fiducial_closer_companion/
+ls
+squeue -u $USER
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2352116.out 
+squeue -u $USER
+scancel 2352116
+squeue -u $USER
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2353600.out 
+squeue -u $USER
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2355167.out 
+squeue -u $USER
+scancel 2355167
+squeue -u $USER
+exit
+scancel -u $USER
+squeue -u $USER
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2355875.out 
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2357027.out 
+ws_list
+squeue -u $USER
+cat slurm-2357027.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2357552.out 
+cat slurm-2357552.out
+squeue -u $USER
+scancel -u $USEr
+scancel -u $USER
+squeue -u $USER
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2359084.out 
+squeue -u $USER
+ls
+cat slurm-2359084.out 
+squeue -u $USER
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2383210.out 
+squeue -u $USER
+scancel -u $USER
+squeue -u $USER
+exit
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-2390805.out 
+squeue -u $USER
+ls
+squeue -u $USER
+scancel -u $USER
+squeue -u $USER
+ls
+sbatch jupyterlab.slurm
+ls
+ls slurm-2391713.out 
+cat slurm-2391713.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-2399598.out 
+cd $WORK
+ws_list
+cd binac_runs/
+ls
+cd old/
+ls
+cat fargo_a_1e-3.par 
+squeue -u $USEr
+squeue -u $USER
+svanvel -u $USER
+scancel -u $USER
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2403580.out 
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2411117.out 
+squeue
+squeue -u $USER
+scancel 2411117
+squeue -u $USER
+ls
+rm *.out
+sbatch jupyterlab.slurm
+ls
+cat slurm-2411160.out 
+squeue -u $USER
+scancel 2411160
+sbatch jupyterlab.slurm
+squeue -u $USER
+ls
+cat slurm-2414412.out 
+squeue -u $USER
+scancel -u $USEr
+scancel -u $USE$
+scancel -u $USER
+squeue -u $USER
+exit
+scancel -u $USER
+sbatch -u $USER
+squeue -u $USER
+exit
+ws_list
+sbatch jupyterlab.slurm
+ls
+cat slurm-2504134.out 
+ws_list
+ws_allocate test 30
+ws_list
+cd $WORK
+cd ../hd_cu284-test
+ls
+nano test.txt
+ls
+cat test.txt 
+cd ..
+ws_allocate test_copy 30
+ws_list
+rsync -avh --progress /pfs/10/work/cu284-test/ /pfs/10/work/cu284-test_copy
+cd hd_cu284_test_copy
+ls
+cd $WORK
+ws_list
+cd ../hd_cu284-test_copy
+ls
+rsync -avh --progress /pfs/10/work/hd_cu284-test/ /pfs/10/work/hd_cu284-test_copy
+ls
+cat test.txt 
+ws_allocate work2 30
+ws_list
+rsync -avh --progress /pfs/10/work/hd_cu284-work/ /pfs/10/work/hd_cu284-work2
+ws_list
+cd $HOME
+nano ~./bashrc
+nano bashrc
+PATH
+pwd
+ls
 cd bin
 ls
-pwd
-libgfortran.so.5
-find /usr -name "libgfortran.so.5*" 2>/dev/null
 cd ..
-cd jupyter\ notebooks/
+grep - R "WORK=" ~/.bash*
+nano .bashrc
+cd $WORK
+cd ..
+ws_list
+ws_release test
+ws_release test_copy
+ws_list
+cd $HOME
+nano .bashrc
+exit
+cd $WORK
 ls
-cd run_ppdisk_fargo3d_1/
+cd $HOME
+sbatch jupyterlab.slurm
+ls
+cat slurm-2675284.out 
 python
-mkdir -p ~/libs
-cp /usr/lib64/libgfortran.so.5* ~/libs/
 ls
-cd $HOME
-ls
-ls ~/libs
-find /usr -name "libgomp.so.1*" 2>/dev/null
-cp /usr/lib64/libgomp.so.1* ~/libs/
-find /usr -name "libquadmath.so.0*" 2>/dev/null
-cp /usr/lib64/libquadmath.so.0* ~/libs/
-ls
-cd jupyter\ notebooks/
-cd run_ppdisk_fargo3d_1/
-ls
-head dust_density.inp 
-pwd
-head dust_density.inp
-tail dust_density.inp
-nano radmc3d.inp
-ls
-head dust_temperature.dat
-head dust_dens.inp
-head dust_density.inp
-head dust_temperature.dat
-squeue -u $USER
-scancel -u $USER
-exit
-ls
-rm slurm-1677747.out 
-sbatch jupyterlab.slurm
-ls
-cat slurm-1686047.out 
-ls
-cd $WORK
-ws_list
-ws_extend work
-ws_list
-ws_extend work 60
-ws_list
-ls
-cd binac_runs/
-ls
-cp fargo_log_grid.par fargo_log_grid2.par
-ls
-nano fargo_log_grid2.par
-cd ..
-ls
-cd fargo3d/
-ls
-cat run_fargo.slurm
-sbatch run_fargo.slurm --jobname=fargo_log_grid2
-squeue -u $USER
-ls
-squeue -u $USER
-ls
-squeue -u $USER
-ls
-sbatch --job-name=fargo_log_grid2 run_fargo.slurm
-squeue
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-squeue -u $USER
-ls
-cd ..
-cd fargo3d/
-ls
-cat fargo_log_grid2.err 
-cat fargo_log_grid2.out
-cd $HOME
-ls
-sbatch jupyterlab.slurm
-squeue -u $USER
-ls
-cat slurm-1750779.out 
-squeue -u $USER
-scancel -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-1750781.out 
-scancel -u $USER
-squeue -u $USER
-exit
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1751577.out 
-squeue
-squeue -u $USER
-ls
-cat slurm-1751577.out 
-scancel -u $USER
-rm *.out
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1751613.out 
-cd $WORK
-cd $HOME
-cd jupyter\ notebooks/
-ls
-scp run_ppdisk_fargo3d_1/ ~/Downloads
-scp -r  run_ppdisk_fargo3d_1/ ~/Downloads
-ls
-pwd
-squeue -u $USER
-exit
-sbatch jupyterlab.slurm
-ls
-squeue -u $USER
-cat slurm-1765111.out 
-squeue -u $USER
-scancel -u $USER
-squeue -u $USER
-exit
+nano jupyterlab.slurm 
+cp jupyterlab.slurm jupyterlab_long.slurm
+nano jupyterlab_long.slurm
 squeue -u $USER
 scancel -u $USER
 ls
 rm *.out
-sbatch jupyterlab.slurm
+sbatch jupyterlab_long.slurm
 ls
-cat slurm-1766644.out 
-ws_list
-sbatch jupyterlab.slurm
-ls
-cat slurm-1806952.out 
-top
-htop
-cd $WORK
-ls
-cd fargo3d/
-ls
-cd outputs/
-ls
-cd fargo_log_grid2
-ls
-cd ../fargo_log_grid
-ls
-pwd
-cd $HOME
-ls
-cp 'jupyter notebooks'/ /pfs/10/work/hd_cu284-work/
-cp -r 'jupyter notebooks'/ /pfs/10/work/hd_cu284-work/
-cd $WORK
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1806980.out 
-cd $HOME
-ls
-cd "jupyter notebooks"/
-ls
-cd run_ppdisk_fargo3d_1/
-ls
-head dust_density.inp 
-nano dust_density.inp 
-ls
-nano dustkapscatmat_1.00e-01.inp 
-cd $HOME
-cd "jupyter notebooks"/
-ls
-cd run_ppdisk_fargo3d_1/
-ls
-ls *.py
-cd ..
-ls *.py
-ls
-du -h Fargo_multifluid.ipynb 
-cd different_viscs_run_ppdisk_fargo3d/
-ls *pynb
-du -h radmc3d_fargo_multifluid.ipynb 
-squeue -u $USER
-cd ..
-sbatch jupyterlab.slurm
-ls
-cat slurm-1810287.out 
-scancel -u $USER
-exit
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1825311.out 
-squeue -u $USER
-ls
-rm *.out
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-1832051.out 
+cat slurm-2679888.out 
 squeue -u $USER
 scancel -u $USER
-squeue -u $USER
-exit
-squeue -u $USER
-cd $WORK
-ls
-cd fargo3d/
-ls
-rm *.out
-rm *.err
-ls
-cat run_fargo.slurm 
-cat fargo_test.slurm 
-ls
-cat fargo_test_gpu.slurm 
-cd ..
-ls
-cd binac_runs/
-ls
-cat fargo_log_grid2
-cat fargo_log_grid2.par 
-ws_list
-ls
-sbatch jupyterlab.slurm
-ls
-squeue -u $USER
-ls
-cat slurm-1836183.out 
-conda info
-module load devel/miniforge/24.9.2
-conda activate kernel_env
-pip install uncertainties
-cd $WORK
-cd fargo3d/
-ls
-cd planets/
-ls
-cp jupiter.cfg 
-cp jupiter.cfg WISPIT_middle.cfg
-nano WISPIT_middle.cfg 
-cat WISPIT_middle.cfg 
-cp WISPIT_middle.cfg WISPIT_upper.cfg
-nano WISPIT_upper.cfg 
-cp WISPIT_middle.cfg WISPIT_lower.cfg
-nano WISPIT_lower.cfg 
-cd ..
-ls
-cd binac_runs/
-ls
-mkdir old
-mv ./ ./old
-mv $WORK/binac_runs $WORK/binac_runs/old
-mv $WORKbinac_runs $WORKbinac_runs/old
-mv -v $WORKbinac_runs $WORKbinac_runs/old
-mv /pfs/10/work/hd_cu284-work/binac_runs /pfs/10/work/hd_cu284-work/binac_runs/old
-mv * /old
-mv * /old/
-mv * old/
-ls
-cd old
-ls
-cat fargo_log_grid.par
-cd ..
-mkfile
-cd old
-cp fargo_log_grid.par ../
-ls
-cd ..
-ls
-nano fargo_log_grid.par 
-cd \$WORK/fargo3d
-cd $WORK
-cd fargo3d/
-cd planets/
-ls
-scancel -u $USER
-squeue -u $USER
-exit
-cd jupyter\ notebooks/
-ls
-pwd
-exit
-sbatch jupyterlab.slurm
-ls
-cat slurm-1958820.out 
-squeue -u $USER
-scancel -u $USER
-exit
-ls
-rm *.out
-sbatch jupyterlab.slurm
-ls
-cat slurm-1959344.out 
-squeue -u $USER
-ls
-squeue -u USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-196
-cat slurm-1960737.out 
-cd $WORK
-ls
-rm slurm-1806980.out 
-cd binac_runs/
-ls
-cat fargo_log_grid.par 
-ls
-cd old
-ls
-cd ..
-nano fargo_log_grid.par 
-cd ..
-cd fargo3d/
-ls
-make
-ls
-sbatch run_fargo.slurm
-ls
-cat run_fargo.slurm.err 
-sbatch --job-name=fargo_log_grid run-fargo.slurm
-sbatch --job-name=fargo_log_grid run_fargo.slurm
-squeue -u $USER
-ls
-cat fargo_log_grid.err
-cat fargo_log_grid.out
-ls
-squeue -u $USER
-ls
-cd outputs/
-ls
-cd fargo_log_grid
-ls
-ls -l
-squeue -u $USER
-scancel 1960744
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-cp fargo_log_grid.par fargo_fiducial.par
-ls
-cd ol
-cd old
-ls
-nano fargo_log_grid.par
-cd ..
-ls
-rm fargo_log_grid.par 
-ls
-cd ..
-cd fargo3d/
-ls
-sbatch --job-name=fargo_fiducial
-sbatch --job-name=fargo_fiducial run_fargo.slurm
-ls
-squeue -u $USER
-cd outputs
-ls
-cd fargo_fiducial/
-ls
-squeue -u $USER
-ls
-squeue -u $USER
-squeue -u $USER
-cd $WORK
-cd fargo3d/
-cd outputs/
-cd fargo_fiducial/
-ls
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-1961021.out 
-cd $WORK
-cd binac_runs/
-ls
-cat fargo_fiducial.par 
-cd old
-ls
-cat fargo_a_1e-2.par 
-cd ..
-cp fargo_fiducial.par fargo_fiducial_more_res.par 
-nano fargo_fiducial_more_res.par 
-cat fargo_fiducial_more_res.par 
-cp fargo_fiducial.par fargo_heavy_planet.par
-nano fargo_heavy_planet.par 
-cp fargo_fiducial.par fargo_light_planet.par
-nano fargo_light_planet.par
-cp fargo_fiducial.par fargo_visc_1e-4.par
-nano fargo_visc_1e-4.par 
-cat fargo_visc_1e-4.par 
-cp fargo_fiducial.par fargo_visc_1e-2.par
-nano fargo_visc_1e-
-nano fargo_visc_1e-2.par 
-cp fargo_fiducial.par fargo_high_flaring_index.par
-nano fargo_high_flaring_index.par 
-cp fargo_fiducial.par fargo_low_flaring_index.par
-nano fargo_low_flaring_index.par 
-cat fargo_low_flaring_index.par 
-ls
-cd $WORK
-sbatch --job-name=fargo_fiducial_more_res.par runfargo.slurm
-cd fargo3d/
-ls
-sbatch --job-name=fargo_fiducial_more_res.par runfargo.slurm
-sbatch --job-name=fargo_fiducial_more_res.par run_fargo.slurm
-sbatch --job-name=fargo_fiducial_heavy_planet.par run_fargo.slurm
-sbatch --job-name=fargo_fiducial_light_planet.par run_fargo.slurm
-sbatch --job-name=fargo_heavy_planet.par run_fargo.slurm
-sbatch --job-name=fargo_light_planet.par run_fargo.slurm
-squeue -u $USER
-ls
-cp run_fargo.slurm run_fargo2.slurm
-cp run_fargo.slurm run_fargo3.slurm
-cp run_fargo.slurm run_fargo4.slurm
-cp run_fargo.slurm run_fargo5.slurm
-cp run_fargo.slurm run_fargo6.slurm
-sbatch --job-name=fargo_fiducial_more_res.par run_fargo2.slurm
-sbatch --job-name=fargo_heavy_planet.par run_fargo3.slurm
-squeue -u $USER
-ls
-rm run_fargo2.slurm
-rm run_fargo3.slurm
-rm run_fargo4.slurm
-rm run_fargo5.slurm
-rm run_fargo6.slurm
-cp run_fargo.slurm run_fargo_multiple.slurm
-nano run_fargo_multiple.slurm 
-cat run_fargo_multiple.slurm 
-squeue -u $USER
-ls
-cat fargo_fiducial_more_res.par.err
-cat fargo_fiducial_more_res.par.out
-sbatch run_fargo_multiple.slurm
-ls
-squeue -u $USER
-cat run_fargo_multiple.slurm.err
-cat run_fargo_multiple.slurm.out
-squeue -u $USER
-exit
-squeue -u $USER
-exit
-squeue -u $USER
-scancel 1961021
-squeue -u $USER
-exit
-sbatch jupyterlab.slurm
-ls
-cat slurm-1962104.out 
-squeue -u $USER
-scancel -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-1962106
-cat slurm-1962106.out 
-cd $WORK
-cd fargo3d/
-ls
-cd outputs/
-ls
-cd ..
-cat run_fargo_multiple.slurm.err
-squeue -u $USER
-cd $WORK
-cd binac_runs/
-cd old
-ls
-cat fargo_log_grid.par 
-cd $HOME
-cd jupyter\ notebooks/
-ls
-cp different_viscs_run_ppdisk_fargo3d/ more_2
-cp -r  different_viscs_run_ppdisk_fargo3d/ more_2
-cd more_2
-ls
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-1963177.out 
 exit
 ws_list
 ws_extend work 30
 ws_list
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-2941043.out 
+squeue -u $USER
+scance -u $USER
+scancel -u $USER
+ls
+exit
+ws_list
+sbatch jupyterlab.slurm
+ls
+cat slurm-3130665.out 
+squeue -u $USEr
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3152900.out 
+squeue -u $USEr
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3169473.out 
+squeue -u $USER
+scancel -u $USER
+exit
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-3190440.out 
+squeue -u $USEr
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3191756.out 
+ws_list
+python
+squeue -u $USEr
+squeue -u $USER
+scancel -u $USER
+exit
+sbatch jupyterlab.slurm
+ls
+cat slurm-3192431.out 
+scancel -u $USER
+squeue -u $USER
 exit

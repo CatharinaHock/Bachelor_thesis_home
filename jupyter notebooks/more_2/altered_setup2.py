@@ -51,10 +51,10 @@ def main(path):
     
     #
     # Star parameters
-    #
-    mstar    = 2.4*ms
-    rstar    = 2.4*rs
-    tstar    = 1e4
+    # taken from van capelleveen paper. Not the same as default!
+    mstar    = 1.0*m_s#2.4*ms
+    rstar    = 1.418*rs#2.4*rs
+    tstar    = 4400#1e4
     pstar    = np.array([0.,0.,0.])
     
     #
