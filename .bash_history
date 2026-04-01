@@ -1,41 +1,3 @@
-squeue -u $UER
-squeue -u $USER
-squeue --start -j 2047366
-cat run_fargo_light2.slurm 
-rm run_fargo_light2.slurm 
-rm *.err
-rm *.out
-ls
-sbatch --job-name=fargo_fiducial run_fargo_light.slurm
-ls
-squeue -u $USER
-scancel 2047366
-scancel 2047368
-sbatch --job-name=fargo_fiducial run_fargo_light.slurm
-squeue -u $USER
-ls
-cat fargo_fiducial.err
-pwd
-ls ../binac_runs/fargo_fiducial.par
-pwd
-nano run_fargo_light.slurm
-sbatch --job-name=fargo_fiducial run_fargo_light.slurm
-squeue -u $USER
-ls
-cat fargo_fiducial.err
-cat /pfs/10/work/hd_cu284-work/binac_runs/fargo_fiducial.par
-pwd
-ls -l /pfs/10/work/hd_cu284-work/binac_runs/fargo_fiducial.par
-cd ..
-cd binac_runs/
-ls
-nano fargo_fiducial_2nd.par
-cat fargo_fiducal.par 
-nano fargo_fiducial_2gen.par
-rm fargo_fiducal.par 
-ls
-cd ..
-cd fargo3d/
 ls
 sbatch --job-name=fargo-fiducial-2gen run_fargo_light.slurm
 squeue -u $USER
@@ -997,4 +959,42 @@ ls
 cat slurm-3192431.out 
 scancel -u $USER
 squeue -u $USER
+exit
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3193356.out 
+scancel -u $USER
+squeue -u $USER
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+git status
+nano .gitignore
+ls
+cat test.txt
+rm test.txt
+ls
+git add .
+git push
+git commit -m "Backup"
+git push
+ls
+nano token.txt
+git push
+ssh-keygen -t ed25519 -C "catharina_lan.hock@gmx.de"
+cat ~/.ssh/id_ed25519.pub
+git status
+rm token.txt
+git status
+git remote set-url origin git@github.com:CatharinaHock/Bachelor_thesis_home.git
+ssh -T git@github.com
+git push
+squeue -u $USER
+ls
+cat slurm-3193362.out 
+ws_list
+squeue -u $USER
+scancel -u $USER
 exit
