@@ -1,23 +1,3 @@
-ls
-sbatch --job-name=fargo-fiducial-2gen run_fargo_light.slurm
-squeue -u $USER
-sbatch --job-name=fargo_fiducial_2gen run_fargo_light.slurm
-ls
-squeue -u $USER
-ws_list
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-cd old
-ls
-cat fargo_a_1e-2.par 
-ls
-cd ..
-ls
-cat fargo_fiducial_2gen.par 
-nano fargo_low_mass_2gen.par
-cd ..
 cd fargo3d/
 ls
 cd planets/
@@ -995,6 +975,26 @@ squeue -u $USER
 ls
 cat slurm-3193362.out 
 ws_list
+squeue -u $USER
+scancel -u $USER
+exit
+squeue -u $USER
+ls
+rm *.out
+sbatch jupyterlab.slurm
+git status
+nano .gitignore
+git add .
+git status
+git commit -m "Yay more backup"
+git push
+nano .gitignore
+git status
+cat slurm-3196255.out 
+squeue -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3196814.out 
 squeue -u $USER
 scancel -u $USER
 exit

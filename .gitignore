@@ -1,2 +1,4 @@
 .*/
 *.out
+*.dust_density.inp
+*.dust_temperature.dat
