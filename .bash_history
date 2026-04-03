@@ -1,38 +1,3 @@
-cd fargo3d/
-ls
-cd planets/
-ls
-cd ..
-sbatch --job-name=fargo_low_mass_2gen.par run_fargo_light.slurm
-squeue -u $USER
-ls
-rm *.err
-rm *.out
-ls
-sbatch --job-name=fargo_low_mass_2gen run_fargo_light.slurm
-cat run_fargo_light.slurm 
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-cat fargo_fiducial_2gen.par 
-ls
-nano fargo_high_mass_2gen.par
-ls
-cd ..
-cd fargo3d/
-sbatch --job-name=fargo_high_mass_2gen run_fargo_light.slurm
-squeue -u $USER
-cd ..
-cd binac_runs/
-ls
-cat fargo_fiducial_2gen.par 
-nano fargo_sigslop_0.5_2gen
-cat fargo_high_mass_2gen.par 
-cat fargo_low_mass_2gen.par 
-ls
-cp fargo_sigslop_0.5_2gen fargo_sigslop_0.5_2gen.par
-ls
 rm fargo_sigslop_0.5_2gen
 ls
 nano fargo_sigslop_-2_2gen.par 
@@ -998,3 +963,38 @@ cat slurm-3196814.out
 squeue -u $USER
 scancel -u $USER
 exit
+git status
+git add .
+git status
+git commit -m "Improving plot labels and such. Do I know what I am doing? Of course not."
+git push
+cat .gitignore
+sbatch jupyterlab.slurm
+ls
+cat slurm-3201693.out 
+squeue -u $USER
+scancel -u $USER
+sbatch juytperlab.sl
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-3203650.out 
+squeue -u $USER
+scancel -u $USER
+sbatch jupyterlab.slurm
+ls
+cat slurm-3203817.out 
+git status
+git add . "I'm distracted so i'll go now"
+git add .
+git commit -m "I'm distracted so I'll go now"
+git push
+exit
+squeue -u $USER
+scancel -u $USER
+exit
+ws_list
+sbatch jupyterlab.slurm
+l
+ls
+cat slurm-3208986.out 
