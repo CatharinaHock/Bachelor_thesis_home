@@ -1,60 +1,3 @@
-rm fargo_sigslop_0.5_2gen
-ls
-nano fargo_sigslop_-2_2gen.par 
-nano fargo_sigslop_0_2gen.par 
-nano fargo_sigslop_-2_2gen.par 
-nano fargo_sigslop_0_2gen.par 
-ls
-fargo_low_visc_2gen.par
-nano fargo_low_visc_2gen.par
-nano fargo_high_visc_2gen.par
-ls
-squeue -u $USER
-cd ../fargo3d/
-sbatch --job-name=fargo_sigslop_0.5_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_sigslop_-2_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_sigslop_0_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_sigslop_low_visc_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_sigslop_high_visc_2gen run_fargo_light.slurm
-squeue -u $USER
-sbatch --job-name=fargo_high_visc_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_loq_visc_2gen run_fargo_light.slurm
-sbatch --job-name=fargo_low_visc_2gen run_fargo_light.slurm
-squeue -u $USER
-cd $HOME
-cd jupyter\ notebooks/
-ls
-cd thesis_suited_plots_maybe/
-ls
-cd radmc3d_sims/
-ls
-python makedustopacfortran.py
-module load devel/miniforge/24.9.2
-python makedustopacfortran.py
-python problem_setup.py
-module load devel/miniforge/24.9.2
-python problem_setup.py
-ls
-Makefile
-cat README
-python problem_setup.py
-which python
-cd $HOME
-cat jupyter
-cat jupyterlab.slurm 
-module load devel/jupyterlab/7.4.1
-cd jupyter\ notebooks/
-ls
-cd thesis_suited_plots_maybe/
-cd radmc3d_sims/
-python problem_setup.py
-ls
-make
-nano make_scatmat_smoothed.f90 
-make
-squeue -u $USER
-exit
-squeue -u $USER
 cd $WORK
 cd fargo3d/
 cd outputs/
@@ -998,3 +941,60 @@ sbatch jupyterlab.slurm
 l
 ls
 cat slurm-3208986.out 
+git status
+git add .
+git commit -m "Improvement on figures."
+git push
+cd $WORK
+cd binac_runs/
+ls
+cat fargo_high_visc_2gen.par 
+ls
+rm *.out
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-3213282.out 
+cd $WORK
+cd binac_runs/
+cd ..
+cd fargo3d/planets/
+ls
+cat WISPIT_companion
+cat WISPIT_companion.cfg 
+ws_list
+ls
+rm slurm-3213282.out 
+sbatch jupyterlab.slurm
+ls
+cat slurm-3218434.out 
+cd $WORK
+cd fargo3d/planets/
+ls
+cat WISPIT_middle.cfg 
+exit
+ws_list
+ws_extend 30 work2
+ws_list
+ws_extend work2 30
+ws_list
+sbatch jupterlab.slurm
+ls
+sbatch jupyterlab.slurm
+ls
+cat slurm-3224571.out 
+squeue -u $USER
+scancel -u $USER
+exit
+cd $WORK
+cd binac_runs/
+ls
+cd ..
+cd fargo3d/
+ls
+cd setups/
+ls
+cd fargo_alpha_visc/
+ls
+cat fargo_alpha_visc.opt
+exit
