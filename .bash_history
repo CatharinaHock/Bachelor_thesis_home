@@ -1,28 +1,3 @@
-cd $WORK
-cd fargo3d/
-cd outputs/
-ls
-cd fargo_high_mass_2gen/
-ls
-cd ..
-ls
-ls fargo_sigslop_0.5_2gen/
-ls
-exit
-sbatch jupyterlab.slurm
-ls
-cat slurm-2065764.out 
-ws_list
-ws_help
-ws_extend work
-ws_list
-ws_extend work 30
-ws_list
-cd $WORK
-cd fargo3d/
-cd outputs/
-ls
-cd $HOME
 cd jupyter\ notebooks/
 ls
 cd thesis_suited_plots_maybe/
@@ -998,3 +973,28 @@ cd fargo_alpha_visc/
 ls
 cat fargo_alpha_visc.opt
 exit
+cd $WORK
+cd binac_runs/
+cd ..
+cd fargo3d/planets/
+ls
+cat WISPIT_middle.cfg 
+cd 
+git status
+git add .
+git commit -m "time for a backup, I guess."
+git push
+cat jupyterlab.slurm 
+cd $WORK
+ls
+cd fargo3d/
+ls
+cat run_fargo.slurm 
+ls
+cd
+cd jupyter\ notebooks/
+ls
+cd thesis_suited_plots_maybe/
+ls
+exit
+ws_list
