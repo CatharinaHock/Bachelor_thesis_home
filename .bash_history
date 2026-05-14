@@ -1,159 +1,3 @@
-cd jupyter\ notebooks/
-ls
-cd thesis_suited_plots_maybe/
-pwd
-ls
-cd radmc3d_sims/
-pwd
-ls
-rm *.out
-ls
-sbatch jupyterlab.slurm
-ls
-cat slurm-2072142.out 
-ls
-cd $WORK
-cd
-ls
-cd $WORK
-ls
-cd binac_runs/
-cd
-ls
-cd $WORK
-cd binac_runs/
-ls
-cat fargo_fiducial_2gen.par 
-squeue -u $USER
-cat slurm-2072142.out 
-squeue -u $USER
-scancel 2072142
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-squeue -u $USER
-ls
-cat slurm-2072244.out 
-squeue -u $USER
-cat slurm-2072
-ls
-cat slurm-2072244.out 
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-2083596.out 
-squeue
-squeue -u $USER
-exit
-ws_list
-sbatch jupyterlab.slurm
-ls
-cat slurm-2149699.out 
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-2151630.out 
-ls
-cd libs/
-ls
-cd ..
-cd bin
-ls
-cd python/
-ls
-cd ..
-ls
-cd python/
-cd radmc3d_tools/
-ls
-cd $WORK
-ls
-cd radmc3d-2.0/
-ls
-cd python/
-ls
-cd radmc3dPy/
-ls
-cd radmc3dPy
-ls
-nano image.py 
-nano image.py
-cp image.py altered_image.py
-ls
-cd $HOME
-ls
-cat slurm-214
-cat slurm-2151630.out 
-squeue -u $USER
-scancel 2151630
-squeue -u $USER
-ls
-squeue -u $USER
-exit
-ws_lis
-ws_list
-exit
-ws_list
-sbatch jupyterlab.slurm
-ls
-cat slurm-2256525.out 
-sbatch jupyterlab.slurm
-ls
-cat slurm-2314300.out 
-squeue -u $USEr
-squeue -u $USER
-sbatch jupyterlab.slurm
-ls
-cat slurm-2316106.out 
-squeue -u $USER
-ws_list
-squeue -u $USER
-scancel 2316106
-squeue -u $USER
-exit
-cd $WORK
-ls
-cd binac_runs/
-ls
-cp fargo_sigslop_0.5_2gen.par fargo_sigslop_1.5_2gen.par
-ls
-nano fargo_sigslop_1.5_2gen.par 
-cat fargo_sigslop_1.5_2gen.par 
-cd ..
-cd fargo3d/
-ls
-cat run_fargo_light.slurm 
-sbatch --job-name=fargo_sigslop_1.5_2gen run_fargo_light.slurm
-squeue -u $USER
-squeue --start -j 2316174
-squeue -u $USER
-scancel 2316174
-cat run_fargo_light.slurm 
-cp run_fargo_light.slurm run_fargo_lighter.slurm
-nano run_fargo_lighter.slurm 
-sbatch --job-name=fargo_sigslop_1.5_2gen run_fargo_lighter.slurm
-squeue -u $USER
-squeue --start -j 2316176
-sshare -u $USER
-squeue --start -j 2316176
-nano run_fargo_lighter.slurm 
-ws_list
-ws_extend work 30
-ws_list
-cd $WORK
-ls
-cd fargo3d/
-ls
-cat fargo_sigslop_1.5_2gen.err
-cd ..
-cd binac_runs/
-ls
-cat fargo_sigslop_1.5_2gen.par 
-ls
-cd ..
-cd fargo3d/
-cat fargo_sigslop_1.5_2gen.err
-cat fargo_sigslop_1.5_2gen.out
 cd $HOME
 sbatch jupyterlab.slurm
 ls
@@ -998,3 +842,159 @@ cd thesis_suited_plots_maybe/
 ls
 exit
 ws_list
+git status
+git add .
+git commit -m "Backup"
+git push
+ws_list
+ws_extend work2 30
+ws_list
+cd $WORK
+ls
+cd jupyter\ notebooks/
+ls
+cd ..
+cd test
+ls
+cd ..
+cd fargo3d/
+git status
+cd ..
+git status
+nano .gitignore
+cd fargo3d/
+ls
+cd outputs
+ls
+cd fargo_a_1e-3
+ls
+cd ..
+cd fargo_sigslop_
+cd fargo_sigslop_0_2gen/
+ls
+cd ..
+ls
+cd ..
+nano .gitignore
+git status
+git commit -m "A backup."
+git add .
+git reset
+ls
+cd fargo3d
+ls
+git status
+cd ..
+nano .gitignore
+git status
+git add .
+git reset
+git add .
+git commit -m "A backup"
+git push
+git push --set-upstream origin main
+git remote add origin https://github.com/CatharinaHock/Bachelor_thesis_work.git
+ssh-keygen -t ed25519 -C "catharina_lan.hock@gmx.de"
+ssh -T git@github.com
+git push --set-upstream origin main
+git remote -v
+git remote set-url origin git@github.com:CatharinaHock/Bachelor_thesis_work.git
+git push
+git push --set-upstream origin main
+git reset
+git status
+nano .gitignore
+git status
+rm -rf radmc3d-2.0/
+git status
+git add .
+git status
+git commit -m "Hmmm."
+git push
+git push --set-upstream origin main
+git reset 
+nano .gitignore
+git status
+git add .
+git commit -m "Backup?"
+git push
+git push --set-upstream origin main
+cd my_radmc3d-2.0/
+ls
+cd run_ppdisk_fargo3d_1/
+ls
+cd $HOME
+cd jupyter\ notebooks/
+ls
+cd run_ppdisk_fargo3d_1/
+ls
+cd $WORK
+nano .gitignore 
+ls
+nano .gitignore 
+git reset
+git status
+rm -rf my_radmc3d-2.0
+git status
+git add .
+git commit -m "Sigh."
+git push
+git push --set-upstream origin main
+git rm -r --cached .
+git add .
+git commit -m "Clean tracked files"
+nano .gitignore
+git status
+git add .
+git commit -m "cleaned up. Maybe?"
+git push
+git push --set-upstream origin main
+cat .gitignore
+git rm -r --cached my_radmc3d-2.0
+ls
+cd jupyter\ notebooks/
+ls
+cd ..
+cd test
+ls
+cd ..
+ls
+git checkout --orphan clean-slate
+git add .
+git commit -m "Clean slate"
+git branch -D main
+git branch -m main
+git push -f origin main
+git status
+cd fargo3d/
+ls
+git ls-files
+cd ..
+git ls-files
+ls
+nano .gitignore 
+git rm -r --cached 'jupyter notebooks'
+git status
+nano .gitignore 
+git status
+git add .
+git commit -m "UGHHH"
+git push
+git push --set-upstream origin main
+nano .gitignore 
+rm -rf fargo3d/.git
+add fargo3d
+git add fargo3d
+git status
+ls
+cd fargo3d/
+ls
+cd ..
+git add fargo3d/outputs
+git add fargo3d/outputs/
+git add fargo3d
+git status
+ws_list
+sbatch jupyterlab.slurm
+ls
+cat slurm-3803937.out 
